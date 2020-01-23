@@ -1,24 +1,22 @@
 /*  Nama    : Rizki Habibi Alamsyah
     NIM     : 13218080  */
-	
+
 #include<stdio.h>
 
-main()
-{
-    double A[2][2]={2,-1,4,-1}; /*Matriks [x,y]*/
-    double B[2]={-2,4}; /*Matriks [c1,c2]*/
-    double xy[2];
-    double A_inv[2][2];
-    double det_A;
-    det_A=(A[0][0]*A[1][1])-(A[0][1]*A[1][0]); /*detA=ad-bc*/
-    A_inv[0][0]=A[1][1]/det_A; /*Hitung invers matriks A*/
-    A_inv[1][1]=A[0][0]/det_A;
-    A_inv[0][1]=-A[0][1]/det_A;
-    A_inv[1][0]=-A[1][0]/det_A;
-    int i;
-    for (i=0;i<2;i=i+1){
-        xy[i]=A_inv[i][0]*B[0]+A_inv[i][1]*B[1]; /*Kalikan matriks A_inv dengan matriks B untuk memperoleh matriks [x,y]*/
+main (void)
+{   const double Vo=50,sin60=0.866,cos60=0.5; /*kecepatan awal dan nilai sinus dan cosinus sudut 60 derajat*/
+    double x,y,xmax,t; /*variabel yang akan digunakan yaitu x:jarak, y:ketinggian*/
+    t=0.01; /*inisiasi t=10ms*/
+    y=Vo*sin60*t-0.5*10*t*t;; /*rumus ketinggian*/
+    while (y>0){ /*saat sebelum menyentuh tanah*/
+        x=50*cos60*t; /*jarak mendatar*/
+        printf("t=%fs ",t);
+        printf("x=%fm ",x);
+        printf("y=%fm\n",y);
+        t=t+0.01; /*t bertambah 10ms setiap iterasi*/
+        y=Vo*sin60*t-0.5*10*t*t;
     }
-    printf("x=%1f\n",xy[0]); 
-    printf("y=%1f",xy[1]);
+    xmax=x;/*jarak maksimum yang diperoleh saat menyentuh tanah*/
+    printf("Jarak terjauh :%f",xmax);
+    return(0);
 }
