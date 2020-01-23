@@ -1,3 +1,8 @@
+/*
+* Nama : Oktavianus Irvan Sitanggang
+* NIM  : 13218071
+* 
+*/
 #include "stdio.h"
 #include "math.h"
 #include "string.h"
