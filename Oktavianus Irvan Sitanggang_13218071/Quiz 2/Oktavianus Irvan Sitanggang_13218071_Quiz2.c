@@ -1,7 +1,8 @@
 /*
 * Nama : Oktavianus Irvan Sitanggang
 * NIM  : 13218071
-* 
+* QUIZ 2
+* Cari x dan y perpotongan dari -2x + y = 2 dan -4x + y = -4
 */
 #include "stdio.h"
 #include "math.h"
