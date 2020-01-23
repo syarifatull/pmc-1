@@ -1,6 +1,6 @@
 
-#include <stdio.h>
 // Quiz 2, 21/01/2020, 13218058
+#include <stdio.h>
 
 /*
 f1 : y1 = 2x + 2
